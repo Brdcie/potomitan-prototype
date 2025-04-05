@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { EmergencyProvider } from './context/EmergencyContext';
+import NavBar from './components/NavBar';
+import HomePage from './pages/HomePage';
+import PhrasesPage from './pages/PhrasesPage';
+import ContributePage from './pages/ContributePage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <EmergencyProvider>
+      <Router>
+        <div className="flex flex-col min-h-screen">
+          <NavBar />
+          <main className="flex-grow">
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/phrases" element={<PhrasesPage />} />
+              <Route path="/phrases/:category" element={<PhrasesPage />} />
+              <Route path="/contribuer" element={<ContributePage />} />
+            </Routes>
+          </main>
+        </div>
+      </Router>
+    </EmergencyProvider>
   );
 }
 
