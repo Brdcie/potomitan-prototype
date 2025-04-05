@@ -1,70 +1,77 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# POTOMITAN - Prototype d'Interface
 
-## Available Scripts
+Interface utilisateur intuitive pour l'application de traduction français-créole guadeloupéen, spécialement conçue pour les situations d'urgence en Guadeloupe.
 
-In the project directory, you can run:
+## 📱 Vue d'ensemble
 
-### `npm start`
+POTOMITAN est une application mobile qui permet aux services d'urgence et à la population créolophone de Guadeloupe de communiquer efficacement lors de situations critiques. Cette interface offre des traductions contextuelles, accompagnées de leur prononciation audio, et propose une fonctionnalité de contribution communautaire.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🌟 Caractéristiques principales
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Mode Urgence** - Interface optimisée pour situations critiques avec code couleur intuitif
+- **Catégories spécialisées** - Médical, Évacuation, Secours, Information
+- **Lecture audio** - Prononciation authentique des phrases créoles
+- **Plateforme contributive** - Ajout et validation de nouvelles traductions par la communauté
+- **Utilisable hors-ligne** - Fonctionne sans connexion internet en situation de crise
 
-### `npm test`
+## 🛠️ Technologies utilisées
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React.js
+- Tailwind CSS
+- HTML5 Web Audio API
+- LocalStorage pour fonctionnalités hors-ligne
 
-### `npm run build`
+## 🚀 Installation et démarrage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Pour installer et lancer le prototype localement:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+# Cloner le dépôt
+git clone https://github.com/ton-nom-utilisateur/potomitan-prototype.git
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Accéder au répertoire
+cd potomitan-prototype
 
-### `npm run eject`
+# Installer les dépendances
+npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Lancer l'application en mode développement
+npm start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📊 Structure du projet
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- `/src/components` - Composants réutilisables
+- `/src/pages` - Pages principales de l'application
+- `/src/context` - Contextes React (mode urgence, audio)
+- `/src/hooks` - Hooks personnalisés
+- `/src/assets` - Ressources statiques (audio, images)
+- `/public/audio` - Fichiers audio de prononciation
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🔄 Flux d'utilisation clés
 
-## Learn More
+1. **Mode Normal** - Navigation intuitive par catégories
+2. **Mode Urgence** - Accès rapide aux phrases critiques avec priorisation intelligente
+3. **Contribution** - Interface de proposition et enregistrement de nouvelles traductions
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🌐 Projets associés
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [Creoles Translation](https://github.com/Brdcie/creoles-translation) - Système de règles de transformation et corpus de traduction qui alimente cette interface
+- [Creole Crowdsourcing](https://github.com/Brdcie/creole-crowdsourcing) - Plateforme de validation collaborative des traductions
 
-### Code Splitting
+## 🤝 Contribution
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Les contributions sont bienvenues! Nous recherchons particulièrement des améliorations sur:
+- Interface utilisateur responsive
+- Performances audio sur appareils mobiles
+- Tests utilisateurs
+- Accessibilité
 
-### Analyzing the Bundle Size
+## 📜 Licence
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Ce projet est sous licence Mozilla Public License 2.0 (MPL-2.0)
 
-### Making a Progressive Web App
+## 📞 Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Pour toute question concernant l'interface utilisateur, contactez brigitte.democrite@brdcie.com
