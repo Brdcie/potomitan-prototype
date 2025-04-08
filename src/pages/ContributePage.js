@@ -15,8 +15,29 @@ export default function ContributePage() {
   
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Contribution submitted:', form);
-    alert('Merci pour votre contribution !');
+    
+    // Créer un nouvel ID unique pour la phrase
+    const newId = `custom_${Date.now()}`;
+    
+    // Créer l'objet de nouvelle phrase
+    const newPhrase = {
+      id: newId,
+      french: form.frenchPhrase,
+      creole: form.creoleTranslation,
+      category: form.category, // Important d'ajouter la catégorie
+      audio: null, // Pas d'audio pour l'instant
+      urgency: form.urgencyLevel
+    };
+    
+    // Stocker dans localStorage pour persister entre les sessions
+    const customPhrases = JSON.parse(localStorage.getItem('customPhrases') || '[]');
+    customPhrases.push(newPhrase);
+    localStorage.setItem('customPhrases', JSON.stringify(customPhrases)); // Correction ici
+    
+    console.log('Contribution submitted:', newPhrase);
+    alert('Merci pour votre contribution ! Votre phrase sera validée par nos experts.');
+    
+    // Réinitialiser le formulaire
     setForm({
       frenchPhrase: '',
       creoleTranslation: '',
@@ -24,7 +45,7 @@ export default function ContributePage() {
       urgencyLevel: 'medium'
     });
   };
-  
+
   return (
     <div className="min-h-screen bg-potomitan-beige">
       <div className="container mx-auto p-4">
