@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "POTOMITAN",
+  "name": "POTOMITAN - Traduction d'urgence",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,9 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#1D3557",
+  "background_color": "#F1FAEE",
+  "orientation": "portrait",
+  "categories": ["utilities", "health", "emergency"],
+  "description": "Application de traduction français-créole guadeloupéen pour situations d'urgence"
 }
