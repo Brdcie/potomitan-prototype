@@ -36,7 +36,7 @@ export const phrasesData = {
     { id: "sec1", french: "À l'aide !", creole: "Anmwé!", audio: "aide.mp3", urgency: "critical" },
     { id: "sec2", french: "Il y a des blessés ici", creole: "Ni moun blesé isi", audio: "blesses.mp3", urgency: "critical" },
     { id: "sec3", french: "Attention, danger !", creole: "Atansyon, danjé !", audio: "danger.mp3", urgency: "critical" },
-    { id: "sec4", french: "Avez-vous besoin d'aide ?", creole: "Ès ou ni bizwen moun po pòté-w sèkou ?", audio: "besoin_aide.mp3", urgency: "high" },
+    { id: "sec4", french: "Avez-vous besoin d'aide ?", creole: "Ès ou ni bizwen moun pou pòté-w sèkou ?", audio: "besoin_aide.mp3", urgency: "high" },
     { id: "sec5", french: "Les secours arrivent", creole: "Sékou-la ka rivé", audio: "secours_arrivent.mp3", urgency: "medium" },
     { id: "sec6", french: "Quelqu'un est coincé", creole: "Ni on moun ki pri", audio: "coince.mp3", urgency: "critical" },
     { id: "sec7", french: "Il faut partir maintenant", creole: "Fò ou pâti onfwa", audio: "partirmaintenant.mp3", urgency: "critical" },
@@ -44,9 +44,9 @@ export const phrasesData = {
     { id: "sec9", french: "Nous sommes là pour vous aider", creole: "Nou la pou édé-w", audio: "aider.mp3", urgency: "high" },
     { id: "sec10", french: "Restez groupés", creole: "Rété ansanm", audio: "restezgroupes.mp3", urgency: "high" },
     { id: "sec11", french: "Montrez-moi où vous avez mal", creole: "Montré mwen ki koté ou ni mal", audio: "montrezmal.mp3", urgency: "high" },
-    { id: "sec12", french: "Tout va bien se passer", creole: "Tout bitin ké bèl", audio: "toutvabien.mp3", urgency: "medium" },
+    { id: "sec12", french: "Tout va bien se passer", creole: "Tout bitin ké bon", audio: "toutvabien.mp3", urgency: "medium" },
     { id: "sec13", french: "Pouvez-vous nous montrer le chemin ?", creole: "És Ou pé montré nou chimen-la ?", audio: "chemin.mp3", urgency: "medium" },
-    { id: "sec14", french: "Il faut attendre encore un peu", creole: "Ou ni pou atann ankò on ti moman", audio: "attendre.mp3", urgency: "medium" },
+    { id: "sec14", french: "Il faut attendre encore un peu", creole: "Ou ni pou atann ankò on tibwen", audio: "attendre.mp3", urgency: "medium" },
     { id: "sec15", french: "Donnez-nous votre numéro", creole: "Ban-nou niméro-aw", audio: "numero.mp3", urgency: "medium" },
    ],
   information: [
@@ -60,10 +60,10 @@ export const phrasesData = {
     { id: "info8", french: "Zone dangereuse", creole: "Andwa-lasa danjéré", audio: "zonedangereuse.mp3", urgency: "critical" },
     { id: "info9", french: "Ne buvez pas l'eau", creole: "Pa bwè dlo la", audio: "eauimpropre.mp3", urgency: "critical" },
     { id: "info10", french: "Retournez chez vous", creole: "Ritouné aka a-zòt", audio: "retournez.mp3", urgency: "critical" },
-    { id: "info11", french: "Plus d'électricité pendant 48h", creole: "Pa ni kouwan pou dé jou", audio: "electricite48h.mp3", urgency: "high" },
+    { id: "info11", french: "Plus d'électricité pendant 48h", creole: "Pé ké ni kouwan pou dé jou", audio: "electricite48h.mp3", urgency: "high" },
     { id: "info12", french: "Pas d'eau potable pendant 3 jours", creole: "Pa ni dlo bon pou bwè pou twa jou", audio: "eaupotable3jours.mp3", urgency: "high" },
     { id: "info13", french: "Fermez portes et fenêtres", creole: "Fèmé pòt épi fenèt", audio: "fermeztout.mp3", urgency: "high" },
     { id: "info14", french: "Point d'eau ici", creole: "Dlo bon bwè isi", audio: "pointeau.mp3", urgency: "high" },
-    { id: "info15", french: "Où est le supermarché le plus proche ?", creole: "Ola sipèrmawch pli pré la yé ?", audio: "supermarche.mp3", urgency: "medium" },
+    { id: "info15", french: "Où est le supermarché le plus proche ?", creole: "Ola sipèrmawché pli pré la yé ?", audio: "supermarche.mp3", urgency: "medium" },
  ]
 };
