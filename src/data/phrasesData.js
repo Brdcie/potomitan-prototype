@@ -32,7 +32,7 @@ export const phrasesData = {
     { id: "evac14", french: "Allez au point de rassemblement", creole: "Ay o pwen rasanmbleman", audio: "rassemblement.mp3", urgency: "medium" },
     { id: "evac15", french: "Signalez votre présence ici", creole: "Fè konnèt ou isi", audio: "signalezpresence.mp3", urgency: "medium" },
   ],
-  secours: 
+  secours: [
     { id: "sec1", french: "À l'aide !", creole: "Anmwé!", audio: "aide.mp3", urgency: "critical" },
     { id: "sec2", french: "Il y a des blessés ici", creole: "Ni moun blesé isi", audio: "blesses.mp3", urgency: "critical" },
     { id: "sec3", french: "Attention, danger !", creole: "Atansyon, danjé !", audio: "danger.mp3", urgency: "critical" },
