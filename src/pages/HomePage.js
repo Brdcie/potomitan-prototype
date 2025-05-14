@@ -115,7 +115,7 @@ export default function HomePage() {
               <div className="flex justify-between items-center">
                 <div>
                   <p className="font-medium">Les secours arrivent</p>
-                  <p className="text-gray-600 italic">Sékou ka rivé</p>
+                  <p className="text-gray-600 italic">Sékou-la ka rivé</p>
                 </div>
                 <button 
                   onClick={() => playAudio('secours_arrivent.mp3')} 
