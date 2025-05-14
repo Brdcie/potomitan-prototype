@@ -3,29 +3,29 @@ import React from 'react';
 
 const reponses = [
   {
-    creole: "An ni mal an tchè an mwen",
+    creole: "An ni mal an kè an mwen",
     francais: "J'ai mal à la poitrine",
-    audio: "reponses/Poitrine.mp3" // Ajustez si nécessaire
+    audio: "reponses/Poitrine.mp3"
   },
   {
     creole: "An pé pa respiwé byen",
     francais: "Je ne peux pas bien respirer",
-    audio: "reponses/Pasrespirer.mp3" // Ajustez si nécessaire
+    audio: "reponses/Pasrespirer.mp3"
   },
   {
     creole: "An tonbé épi an blesé pyé an mwen",
     francais: "Je suis tombé et je me suis blessé au pied",
-    audio: "reponses/pied.mp3" // Ajustez si nécessaire
+    audio: "reponses/pied.mp3"
   },
   {
     creole: "Wi, an pé konprann",
     francais: "Oui, je comprends",
-    audio: "reponses/comprend.mp3" // Ajustez si nécessaire
+    audio: "reponses/comprend.mp3"
   },
   {
     creole: "Non, an pa ka sonjé",
     francais: "Non, je ne m'en souviens pas",
-    audio: "reponses/Souviens.mp3" // Ajustez si nécessaire
+    audio: "reponses/Souviens.mp3"
   }
 ];
 
