@@ -1,6 +1,7 @@
 // POTOMITAN – © 2025
 // Ce fichier est sous licence MPL-2.0.
-// Voir le fichier LICENSE pour plus d’informations.import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// Voir le fichier LICENSE pour plus d’informations.
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { EmergencyProvider } from './context/EmergencyContext';
 import NavBar from './components/NavBar';
 import HomePage from './pages/HomePage';

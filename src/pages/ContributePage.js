@@ -1,6 +1,7 @@
 // POTOMITAN – © 2025
 // Ce fichier est sous licence MPL-2.0.
-// Voir le fichier LICENSE pour plus d’informations.import { useState } from 'react';
+// Voir le fichier LICENSE pour plus d’informations.
+import { useState } from 'react';
 
 export default function ContributePage() {
   const [form, setForm] = useState({
