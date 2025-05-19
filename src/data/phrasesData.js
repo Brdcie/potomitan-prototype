@@ -1,3 +1,6 @@
+// POTOMITAN – © 2025
+// Ce fichier est sous licence MPL-2.0.
+// Voir le fichier LICENSE pour plus d’informations.
 export const phrasesData = {
   medical: [
     { id: "med1", french: "Où avez-vous mal ?", creole: "Ki koté ou ni mal ?", audio: "ou_mal.mp3", urgency: "critical" },

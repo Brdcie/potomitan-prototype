@@ -68,9 +68,16 @@ Les contributions sont bienvenues! Nous recherchons particulièrement des améli
 - Tests utilisateurs
 - Accessibilité
 
-## 📜 Licence
+## 📜 LicenceS
+## Licences
+## 📜 Licences
 
-Ce projet est sous licence Mozilla Public License 2.0 (MPL-2.0)
+- Le **code source** de ce dépôt est distribué sous licence [Mozilla Public License 2.0 (MPL-2.0)](LICENSE.txt).
+- Les **fichiers médias** (images : PNG, SVG / audio : MP3) sont des créations originales protégées par le droit d’auteur.  
+  Ils **ne sont pas couverts** par la MPL-2.0. Voir [`MEDIA_LICENCE.md`](MEDIA_LICENCE.md) pour les conditions d’utilisation.
+- Le nom **"POTOMITAN"**, le logo, l’interface utilisateur et les éléments de marque sont protégés indépendamment par le droit des marques et le droit d’auteur.
+
+© 2025 POTOMITAN. Tous droits réservés.
 
 ## 📞 Contact
 

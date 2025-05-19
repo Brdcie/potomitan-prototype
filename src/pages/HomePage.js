@@ -1,3 +1,6 @@
+// POTOMITAN – © 2025
+// Ce fichier est sous licence MPL-2.0.
+// Voir le fichier LICENSE pour plus d’informations.
 import { useEmergency } from '../context/EmergencyContext';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';

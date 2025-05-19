@@ -1,3 +1,6 @@
+// POTOMITAN – © 2025
+// Ce fichier est sous licence MPL-2.0.
+// Voir le fichier LICENSE pour plus d’informations.
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEmergency } from '../context/EmergencyContext';
 import { useState, useEffect } from 'react';
