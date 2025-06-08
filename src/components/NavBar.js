@@ -41,7 +41,7 @@ export default function NavBar() {
           <Link to="/" className="text-white hover:text-potomitan-beige">Accueil</Link>
           <Link to="/phrases" className="text-white hover:text-potomitan-beige">Phrases</Link>
           <Link to="/contribuer" className="text-white hover:text-potomitan-beige">Contribuer</Link>
-          <span className="bg-white text-potomitan-dark-blue text-xs font-semibold px-2 py-0.5 rounded-md ml-4">v1.0.1</span>
+          <span className="bg-white text-potomitan-dark-blue text-xs font-semibold px-2 py-0.5 rounded-md ml-4">v1.1.0</span>
           </div>
       </div>
     </nav>
