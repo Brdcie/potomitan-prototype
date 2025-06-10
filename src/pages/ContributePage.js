@@ -18,34 +18,38 @@ export default function ContributePage() {
     setForm(prev => ({ ...prev, [name]: value }));
   };
   
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    
-    const newId = `custom_${Date.now()}`;
-    const newPhrase = {
-      id: newId,
-      french: form.frenchPhrase,
-      creole: form.creoleTranslation,
-      category: form.category,
-      audio: null,
-      urgency: form.urgencyLevel
-    };
-    
-    const customPhrases = JSON.parse(localStorage.getItem('customPhrases') || '[]');
-    customPhrases.push(newPhrase);
-    localStorage.setItem('customPhrases', JSON.stringify(customPhrases));
-    
-    console.log('Contribution submitted:', newPhrase);
-    alert('Merci pour votre contribution ! Votre phrase sera validée par nos experts.');
-    
-    setForm({
-      frenchPhrase: '',
-      creoleTranslation: '',
-      category: 'medical',
-      urgencyLevel: 'medium'
-    });
+const handleSubmit = (e) => {
+  e.preventDefault();
+  
+  // Créer un nouvel ID unique pour la phrase
+  const newId = `custom_${Date.now()}`;
+  
+  // Créer l'objet de nouvelle phrase
+  const newPhrase = {
+    id: newId,
+    french: form.frenchPhrase,
+    creole: form.creoleTranslation,
+    category: form.category,
+    audio: null,
+    urgency: form.urgencyLevel
   };
-
+  
+  // Stocker dans localStorage pour persister entre les sessions
+  const customPhrases = JSON.parse(localStorage.getItem('customPhrases') || '[]');
+  customPhrases.push(newPhrase);
+  localStorage.setItem('customPhrases', JSON.stringify(customPhrases));
+  
+  console.log('Contribution submitted:', newPhrase);
+  alert('✅ Contribution enregistrée !\n\nVotre phrase a été sauvegardée et apparaît maintenant dans l\'onglet "Phrases" avec une bordure verte.\n\nRendez-vous dans "Phrases" pour voir toutes vos contributions.');
+  
+  // Réinitialiser le formulaire
+  setForm({
+    frenchPhrase: '',
+    creoleTranslation: '',
+    category: 'medical',
+    urgencyLevel: 'medium'
+  });
+};
   // Fonction pour ouvrir le pipeline d'annotation dans un nouvel onglet
   const openAnnotationPipeline = () => {
     window.open('https://potomitan-qixr.onrender.com/', '_blank', 'noopener,noreferrer');
