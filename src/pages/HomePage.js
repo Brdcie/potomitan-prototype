@@ -116,12 +116,11 @@ export default function HomePage() {
           <div className="flex items-start gap-4">
             <div className="flex-shrink-0">
               <div className="w-12 h-12 bg-potomitan-green rounded-full flex items-center justify-center text-white text-xl">
-                🤝
               </div>
             </div>
             <div className="flex-1">
               <h3 className="text-xl font-bold mb-2 text-potomitan-dark-blue">
-                Votre créole peut sauver des vies !
+              🫱🏾‍🫲🏼 🤝🏾 🫱🏾‍🫲🏼Votre créole peut sauver des vies ! 🫱🏾‍🫲🏼 🤝🏾 🫱🏾‍🫲🏼
               </h3>
               <p className="text-gray-700 mb-4 leading-relaxed">
                 Vous parlez créole guadeloupéen ? Votre expertise est précieuse ! 
