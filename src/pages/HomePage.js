@@ -4,7 +4,8 @@
 import { useEmergency } from '../context/EmergencyContext';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import ReponseCreole from '../components/ReponseCreole'; // Importez le nouveau composant
+import ReponseCreole from '../components/ReponseCreole';
+import hautParleurIcon from '../assets/haut-parleur.png';
 
 const categories = [
   { id: 'medical', name: 'Médical', color: 'bg-potomitan-orange' },
@@ -96,7 +97,7 @@ export default function HomePage() {
                   onClick={() => playAudio('ou_mal.mp3')} 
                   className="bg-potomitan-light-blue p-2 rounded-full"
                 >
-                  ▶️
+                <img src={hautParleurIcon} alt="Listen" className="w-4 h-4" />
                 </button>
               </div>
             </li>
@@ -110,7 +111,7 @@ export default function HomePage() {
                   onClick={() => playAudio('calme.mp3')} 
                   className="bg-potomitan-light-blue p-2 rounded-full"
                 >
-                  ▶️
+                <img src={hautParleurIcon} alt="Listen" className="w-4 h-4" />
                 </button>
               </div>
             </li>
@@ -124,7 +125,7 @@ export default function HomePage() {
                   onClick={() => playAudio('secours_arrivent.mp3')} 
                   className="bg-potomitan-light-blue p-2 rounded-full"
                 >
-                  ▶️
+                 <img src={hautParleurIcon} alt="Listen" className="w-4 h-4" />
                 </button>
               </div>
             </li>

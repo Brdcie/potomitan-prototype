@@ -1,0 +1,18 @@
+{
+  "total": 65,
+  "by_category": {
+    "medical": 15,
+    "evacuation": 15,
+    "secours": 15,
+    "information": 15,
+    "reponses_patients": 5
+  },
+  "by_urgency": {
+    "critical": 17,
+    "high": 25,
+    "medium": 21,
+    "low": 2
+  },
+  "with_audio": 65,
+  "without_audio": 0
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "med1",
+    "french": "Où avez-vous mal ?",
+    "creole": "Ki koté ou ni mal ?",
+    "audio": "ou_mal.mp3",
+    "urgency": "critical",
+    "category": "medical",
+    "source": "static_data"
+  },
+  {
+    "id": "med2",
+    "french": "Respirez profondément",
+    "creole": "rèspiré fò",
+    "audio": "respire.mp3",
+    "urgency": "high",
+    "category": "medical",
+    "source": "static_data"
+  },
+  {
+    "id": "med3",
+    "french": "Prenez ce médicament",
+    "creole": "Pran rimèd-lasa",
+    "audio": "medicament.mp3",
+    "urgency": "medium",
+    "category": "medical",
+    "source": "static_data"
+  },
+  {
+    "id": "med4",
+    "french": "Restez calme",
+    "creole": "Rété kalm",
+    "audio": "calme.mp3",
+    "urgency": "low",
+    "category": "medical",
+    "source": "static_data"
+  },
+  {
+    "id": "med5",
+    "french": "Avez-vous de la fièvre ?",
+    "creole": "És Ou ni lafyèv ?",
+    "audio": "fievre.mp3",
+    "urgency": "high",
+    "category": "medical",
+    "source": "static_data"
+  }
+]

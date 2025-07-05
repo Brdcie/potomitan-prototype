@@ -5,6 +5,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useEmergency } from '../context/EmergencyContext';
 import { useState, useEffect } from 'react';
 import { phrasesData } from '../data/phrasesData';
+import hautParleurIcon from '../assets/haut-parleur.png';
 
 export default function PhrasesPage() {
   const { category } = useParams();
@@ -162,7 +163,7 @@ export default function PhrasesPage() {
                     onClick={() => playAudio(phrase.audio)}
                     className="bg-potomitan-medium-blue p-3 rounded-full text-white"
                   >
-                    ▶️
+                   <img src={hautParleurIcon} alt="Listen" className="w-4 h-4" />
                   </button>
                 </div>
               </div>

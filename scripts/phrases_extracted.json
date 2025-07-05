@@ -1,0 +1,587 @@
+[
+  {
+    "id": "med1",
+    "french": "Où avez-vous mal ?",
+    "creole": "Ki koté ou ni mal ?",
+    "audio": "ou_mal.mp3",
+    "urgency": "critical",
+    "category": "medical",
+    "source": "static_data"
+  },
+  {
+    "id": "med2",
+    "french": "Respirez profondément",
+    "creole": "rèspiré fò",
+    "audio": "respire.mp3",
+    "urgency": "high",
+    "category": "medical",
+    "source": "static_data"
+  },
+  {
+    "id": "med3",
+    "french": "Prenez ce médicament",
+    "creole": "Pran rimèd-lasa",
+    "audio": "medicament.mp3",
+    "urgency": "medium",
+    "category": "medical",
+    "source": "static_data"
+  },
+  {
+    "id": "med4",
+    "french": "Restez calme",
+    "creole": "Rété kalm",
+    "audio": "calme.mp3",
+    "urgency": "low",
+    "category": "medical",
+    "source": "static_data"
+  },
+  {
+    "id": "med5",
+    "french": "Avez-vous de la fièvre ?",
+    "creole": "És Ou ni lafyèv ?",
+    "audio": "fievre.mp3",
+    "urgency": "high",
+    "category": "medical",
+    "source": "static_data"
+  },
+  {
+    "id": "med6",
+    "french": "Montrez-moi où est la douleur",
+    "creole": "Montré mwen ki koté ou ni mal",
+    "audio": "montre_douleur.mp3",
+    "urgency": "critical",
+    "category": "medical",
+    "source": "static_data"
+  },
+  {
+    "id": "med7",
+    "french": "Est-ce que vous m'entendez ?",
+    "creole": "És ou ka tann mwen ?",
+    "audio": "entendre.mp3",
+    "urgency": "critical",
+    "category": "medical",
+    "source": "static_data"
+  },
+  {
+    "id": "med8",
+    "french": "Ne bougez pas",
+    "creole": "Pa boujé",
+    "audio": "pasbougez.mp3",
+    "urgency": "critical",
+    "category": "medical",
+    "source": "static_data"
+  },
+  {
+    "id": "med9",
+    "french": "Depuis quand ?",
+    "creole": "Dépi ki tan ?",
+    "audio": "quand.mp3",
+    "urgency": "high",
+    "category": "medical",
+    "source": "static_data"
+  },
+  {
+    "id": "med10",
+    "french": "Pouvez-vous me montrer ?",
+    "creole": "Ou pé montwé-mwen ?",
+    "audio": "montrez.mp3",
+    "urgency": "high",
+    "category": "medical",
+    "source": "static_data"
+  },
+  {
+    "id": "med11",
+    "french": "Avez-vous des allergies ?",
+    "creole": "Ou ni alèji ?",
+    "audio": "allergie.mp3",
+    "urgency": "high",
+    "category": "medical",
+    "source": "static_data"
+  },
+  {
+    "id": "med12",
+    "french": "Prenez-vous des médicaments ?",
+    "creole": "Ou ka pran rimèd ?",
+    "audio": "questionmedicament.mp3",
+    "urgency": "high",
+    "category": "medical",
+    "source": "static_data"
+  },
+  {
+    "id": "med13",
+    "french": "Pouvez-vous bouger les jambes ?",
+    "creole": "Ou pé boujé janm a-w ?",
+    "audio": "questionjambe.mp3",
+    "urgency": "high",
+    "category": "medical",
+    "source": "static_data"
+  },
+  {
+    "id": "med14",
+    "french": "Comment vous appelez-vous ?",
+    "creole": "Ki non a-w ?",
+    "audio": "questionnom.mp3",
+    "urgency": "medium",
+    "category": "medical",
+    "source": "static_data"
+  },
+  {
+    "id": "med15",
+    "french": "Quel âge avez-vous ?",
+    "creole": "Ki laj a-w?",
+    "audio": "questionage.mp3",
+    "urgency": "medium",
+    "category": "medical",
+    "source": "static_data"
+  },
+  {
+    "id": "evac1",
+    "french": "Suivez-moi rapidement",
+    "creole": "Suiv mwen vitman",
+    "audio": "suivez_moi.mp3",
+    "urgency": "critical",
+    "category": "evacuation",
+    "source": "static_data"
+  },
+  {
+    "id": "evac2",
+    "french": "Ne prenez que l'essentiel",
+    "creole": "Pran sèlman sa ou  ni bizwen",
+    "audio": "essentiel.mp3",
+    "urgency": "high",
+    "category": "evacuation",
+    "source": "static_data"
+  },
+  {
+    "id": "evac3",
+    "french": "Restez groupés",
+    "creole": "Rété ansanm",
+    "audio": "rester_groupe.mp3",
+    "urgency": "high",
+    "category": "evacuation",
+    "source": "static_data"
+  },
+  {
+    "id": "evac4",
+    "french": "Le centre d'évacuation est par ici",
+    "creole": "Sant évakwasyon kotésit",
+    "audio": "centre_evacuation.mp3",
+    "urgency": "medium",
+    "category": "evacuation",
+    "source": "static_data"
+  },
+  {
+    "id": "evac5",
+    "french": "Combien de personnes vivent ici ?",
+    "creole": "Konbyen moun ka viv isi ?",
+    "audio": "combien_personnes.mp3",
+    "urgency": "medium",
+    "category": "evacuation",
+    "source": "static_data"
+  },
+  {
+    "id": "evac6",
+    "french": "Dépêchez-vous !",
+    "creole": "Pòté mannèv!",
+    "audio": "depechez.mp3",
+    "urgency": "critical",
+    "category": "evacuation",
+    "source": "static_data"
+  },
+  {
+    "id": "evac7",
+    "french": "Sortez vite !",
+    "creole": "Sòti vitman !",
+    "audio": "sortezvite.mp3",
+    "urgency": "critical",
+    "category": "evacuation",
+    "source": "static_data"
+  },
+  {
+    "id": "evac8",
+    "french": "Prenez vos papiers",
+    "creole": "Pran papyé a-w",
+    "audio": "papiers.mp3",
+    "urgency": "high",
+    "category": "evacuation",
+    "source": "static_data"
+  },
+  {
+    "id": "evac9",
+    "french": "Aidez votre voisin",
+    "creole": "Édé vwazen a-w",
+    "audio": "aidezvoisin.mp3",
+    "urgency": "high",
+    "category": "evacuation",
+    "source": "static_data"
+  },
+  {
+    "id": "evac10",
+    "french": "Fermez bien votre porte",
+    "creole": "Fèmé pòt a-w byen",
+    "audio": "fermezporte.mp3",
+    "urgency": "high",
+    "category": "evacuation",
+    "source": "static_data"
+  },
+  {
+    "id": "evac11",
+    "french": "Sortez par l'escalier",
+    "creole": "Sòti pa èskalyéla",
+    "audio": "escalier.mp3",
+    "urgency": "high",
+    "category": "evacuation",
+    "source": "static_data"
+  },
+  {
+    "id": "evac12",
+    "french": "Coupez le gaz et l'électricité",
+    "creole": "Koupé gaz é kouwanla",
+    "audio": "coupezgaz.mp3",
+    "urgency": "high",
+    "category": "evacuation",
+    "source": "static_data"
+  },
+  {
+    "id": "evac13",
+    "french": "Avez-vous vos documents ?",
+    "creole": "És ou ni dokiman a-w ?",
+    "audio": "documents.mp3",
+    "urgency": "medium",
+    "category": "evacuation",
+    "source": "static_data"
+  },
+  {
+    "id": "evac14",
+    "french": "Allez au point de rassemblement",
+    "creole": "Ay o pwen rasanmbleman",
+    "audio": "rassemblement.mp3",
+    "urgency": "medium",
+    "category": "evacuation",
+    "source": "static_data"
+  },
+  {
+    "id": "evac15",
+    "french": "Signalez votre présence ici",
+    "creole": "Fè konnèt ou isi",
+    "audio": "signalezpresence.mp3",
+    "urgency": "medium",
+    "category": "evacuation",
+    "source": "static_data"
+  },
+  {
+    "id": "sec1",
+    "french": "À l'aide !",
+    "creole": "Anmwé!",
+    "audio": "aide.mp3",
+    "urgency": "critical",
+    "category": "secours",
+    "source": "static_data"
+  },
+  {
+    "id": "sec2",
+    "french": "Il y a des blessés ici",
+    "creole": "Ni moun blesé isi",
+    "audio": "blesses.mp3",
+    "urgency": "critical",
+    "category": "secours",
+    "source": "static_data"
+  },
+  {
+    "id": "sec3",
+    "french": "Attention, danger !",
+    "creole": "Atansyon, danjé !",
+    "audio": "danger.mp3",
+    "urgency": "critical",
+    "category": "secours",
+    "source": "static_data"
+  },
+  {
+    "id": "sec4",
+    "french": "Avez-vous besoin d'aide ?",
+    "creole": "Ès ou ni bizwen moun pou pòté-w sèkou ?",
+    "audio": "besoin_aide.mp3",
+    "urgency": "high",
+    "category": "secours",
+    "source": "static_data"
+  },
+  {
+    "id": "sec5",
+    "french": "Les secours arrivent",
+    "creole": "Sékou-la ka rivé",
+    "audio": "secours_arrivent.mp3",
+    "urgency": "medium",
+    "category": "secours",
+    "source": "static_data"
+  },
+  {
+    "id": "sec6",
+    "french": "Quelqu'un est coincé",
+    "creole": "Ni on moun ki pri",
+    "audio": "coince.mp3",
+    "urgency": "critical",
+    "category": "secours",
+    "source": "static_data"
+  },
+  {
+    "id": "sec7",
+    "french": "Il faut partir maintenant",
+    "creole": "Fò ou pâti onfwa",
+    "audio": "partirmaintenant.mp3",
+    "urgency": "critical",
+    "category": "secours",
+    "source": "static_data"
+  },
+  {
+    "id": "sec8",
+    "french": "Est-ce que ça va ?",
+    "creole": "Ki jan a-w ?",
+    "audio": "cava.mp3",
+    "urgency": "high",
+    "category": "secours",
+    "source": "static_data"
+  },
+  {
+    "id": "sec9",
+    "french": "Nous sommes là pour vous aider",
+    "creole": "Nou la pou édé-w",
+    "audio": "aider.mp3",
+    "urgency": "high",
+    "category": "secours",
+    "source": "static_data"
+  },
+  {
+    "id": "sec10",
+    "french": "Restez groupés",
+    "creole": "Rété ansanm",
+    "audio": "restezgroupes.mp3",
+    "urgency": "high",
+    "category": "secours",
+    "source": "static_data"
+  },
+  {
+    "id": "sec11",
+    "french": "Montrez-moi où vous avez mal",
+    "creole": "Montré mwen ki koté ou ni mal",
+    "audio": "montrezmal.mp3",
+    "urgency": "high",
+    "category": "secours",
+    "source": "static_data"
+  },
+  {
+    "id": "sec12",
+    "french": "Tout va bien se passer",
+    "creole": "Tout bitin ké bon",
+    "audio": "toutvabien.mp3",
+    "urgency": "medium",
+    "category": "secours",
+    "source": "static_data"
+  },
+  {
+    "id": "sec13",
+    "french": "Pouvez-vous nous montrer le chemin ?",
+    "creole": "És Ou pé montré nou chimen-la ?",
+    "audio": "chemin.mp3",
+    "urgency": "medium",
+    "category": "secours",
+    "source": "static_data"
+  },
+  {
+    "id": "sec14",
+    "french": "Il faut attendre encore un peu",
+    "creole": "Ou ni pou atann ankò on tibwen",
+    "audio": "attendre.mp3",
+    "urgency": "medium",
+    "category": "secours",
+    "source": "static_data"
+  },
+  {
+    "id": "sec15",
+    "french": "Donnez-nous votre numéro",
+    "creole": "Ban-nou niméro-aw",
+    "audio": "numero.mp3",
+    "urgency": "medium",
+    "category": "secours",
+    "source": "static_data"
+  },
+  {
+    "id": "info1",
+    "french": "L'eau n'est pas potable",
+    "creole": "Dlo-la pa bon pou bwè",
+    "audio": "eau_non_potable.mp3",
+    "urgency": "high",
+    "category": "information",
+    "source": "static_data"
+  },
+  {
+    "id": "info2",
+    "french": "Restez à l'intérieur",
+    "creole": "Rété adan kaz-la",
+    "audio": "rester_interieur.mp3",
+    "urgency": "high",
+    "category": "information",
+    "source": "static_data"
+  },
+  {
+    "id": "info3",
+    "french": "La route est fermée",
+    "creole": "chimen-la fèmé",
+    "audio": "route_fermee.mp3",
+    "urgency": "medium",
+    "category": "information",
+    "source": "static_data"
+  },
+  {
+    "id": "info4",
+    "french": "Le courant reviendra bientôt",
+    "creole": "Kouwan-la ké vini talè",
+    "audio": "courant_bientot.mp3",
+    "urgency": "low",
+    "category": "information",
+    "source": "static_data"
+  },
+  {
+    "id": "info5",
+    "french": "Écoutez la radio pour les informations",
+    "creole": "Kouté radyo-la pou tan nouvèl",
+    "audio": "ecouter_radio.mp3",
+    "urgency": "medium",
+    "category": "information",
+    "source": "static_data"
+  },
+  {
+    "id": "info6",
+    "french": "Cyclone en approche",
+    "creole": "Siklòn ka vini",
+    "audio": "cyclone.mp3",
+    "urgency": "critical",
+    "category": "information",
+    "source": "static_data"
+  },
+  {
+    "id": "info7",
+    "french": "Évacuation obligatoire",
+    "creole": "Ou dwèt soti",
+    "audio": "evacobligatoire.mp3",
+    "urgency": "critical",
+    "category": "information",
+    "source": "static_data"
+  },
+  {
+    "id": "info8",
+    "french": "Zone dangereuse",
+    "creole": "Andwa-lasa danjéré",
+    "audio": "zonedangereuse.mp3",
+    "urgency": "critical",
+    "category": "information",
+    "source": "static_data"
+  },
+  {
+    "id": "info9",
+    "french": "Ne buvez pas l'eau",
+    "creole": "Pa bwè dlo la",
+    "audio": "eauimpropre.mp3",
+    "urgency": "critical",
+    "category": "information",
+    "source": "static_data"
+  },
+  {
+    "id": "info10",
+    "french": "Retournez chez vous",
+    "creole": "Ritouné aka a-zòt",
+    "audio": "retournez.mp3",
+    "urgency": "critical",
+    "category": "information",
+    "source": "static_data"
+  },
+  {
+    "id": "info11",
+    "french": "Plus d'électricité pendant 48h",
+    "creole": "Pé ké ni kouwan pou dé jou",
+    "audio": "electricite48h.mp3",
+    "urgency": "high",
+    "category": "information",
+    "source": "static_data"
+  },
+  {
+    "id": "info12",
+    "french": "Pas d'eau potable pendant 3 jours",
+    "creole": "Pa ni dlo bon pou bwè pou twa jou",
+    "audio": "eaupotable3jours.mp3",
+    "urgency": "high",
+    "category": "information",
+    "source": "static_data"
+  },
+  {
+    "id": "info13",
+    "french": "Fermez portes et fenêtres",
+    "creole": "Fèmé pòt épi fenèt",
+    "audio": "fermeztout.mp3",
+    "urgency": "high",
+    "category": "information",
+    "source": "static_data"
+  },
+  {
+    "id": "info14",
+    "french": "Point d'eau ici",
+    "creole": "Dlo bon bwè isi",
+    "audio": "pointeau.mp3",
+    "urgency": "high",
+    "category": "information",
+    "source": "static_data"
+  },
+  {
+    "id": "info15",
+    "french": "Où est le supermarché le plus proche ?",
+    "creole": "Ola sipèrmawché pli pré la yé ?",
+    "audio": "supermarche.mp3",
+    "urgency": "medium",
+    "category": "information",
+    "source": "static_data"
+  },
+  {
+    "id": "reponse_1",
+    "french": "J'ai mal à la poitrine",
+    "creole": "An ni mal an kè an mwen",
+    "audio": "reponses/Poitrine.mp3",
+    "urgency": "medium",
+    "category": "reponses_patients",
+    "source": "demo_responses"
+  },
+  {
+    "id": "reponse_2",
+    "french": "Je ne peux pas bien respirer",
+    "creole": "An pé pa respiwé byen",
+    "audio": "reponses/Pasrespirer.mp3",
+    "urgency": "medium",
+    "category": "reponses_patients",
+    "source": "demo_responses"
+  },
+  {
+    "id": "reponse_3",
+    "french": "Je suis tombé et je me suis blessé au pied",
+    "creole": "An tonbé épi an blesé pyé an mwen",
+    "audio": "reponses/pied.mp3",
+    "urgency": "medium",
+    "category": "reponses_patients",
+    "source": "demo_responses"
+  },
+  {
+    "id": "reponse_4",
+    "french": "Oui, je comprends",
+    "creole": "Wi, an pé konprann",
+    "audio": "reponses/comprend.mp3",
+    "urgency": "medium",
+    "category": "reponses_patients",
+    "source": "demo_responses"
+  },
+  {
+    "id": "reponse_5",
+    "french": "Non, je ne m'en souviens pas",
+    "creole": "Non, an pa ka sonjé",
+    "audio": "reponses/Souviens.mp3",
+    "urgency": "medium",
+    "category": "reponses_patients",
+    "source": "demo_responses"
+  }
+]
