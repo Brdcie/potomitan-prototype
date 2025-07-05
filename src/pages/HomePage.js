@@ -1,179 +1,162 @@
+// src/pages/HomePage.js - Version corrigée
 // POTOMITAN – © 2025
 // Ce fichier est sous licence MPL-2.0.
-// Voir le fichier LICENSE pour plus d’informations.
-import { useEmergency } from '../context/EmergencyContext';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import ReponseCreole from '../components/ReponseCreole';
+import TextTranslation from '../components/TextTranslation';
 import hautParleurIcon from '../assets/haut-parleur.png';
 
 const categories = [
-  { id: 'medical', name: 'Médical', color: 'bg-potomitan-orange' },
-  { id: 'evacuation', name: 'Évacuation', color: 'bg-potomitan-yellow' },
-  { id: 'secours', name: 'Secours', color: 'bg-potomitan-green' },
-  { id: 'information', name: 'Information', color: 'bg-potomitan-light-blue' },
+  { id: 'medical', name: 'Médical', color: 'bg-potomitan-red', urgent: true },
+  { id: 'evacuation', name: 'Évacuation', color: 'bg-potomitan-orange', urgent: true },
+  { id: 'secours', name: 'Secours', color: 'bg-potomitan-yellow', urgent: false },
+  { id: 'information', name: 'Information', color: 'bg-potomitan-light-blue', urgent: false },
 ];
 
 export default function HomePage() {
-  const { isEmergencyMode, toggleEmergencyMode } = useEmergency();
   const [currentAudio, setCurrentAudio] = useState(null);
-  // Nouvel état pour la réponse sélectionnée
-  const [selectedResponse, setSelectedResponse] = useState(null);
+  const [showTranslator, setShowTranslator] = useState(false);
   
-  // Fonction pour jouer l'audio
   const playAudio = (audioFile) => {
     if (currentAudio) {
       currentAudio.pause();
     }
-    // Charger et jouer l'audio réel
     const audio = new Audio(`/audio/${audioFile}`);
     audio.play().catch(err => console.log('Erreur audio:', err));
     setCurrentAudio(audio);
   };
   
-  // Gestion de la sélection de réponse
-  const handleResponseSelection = (reponse) => {
-    setSelectedResponse(reponse);
-    // Jouer l'audio si disponible
-    if (reponse.audio) {
-      playAudio(reponse.audio);
-    }
-  };
-  
-  // Fonction pour afficher/masquer le panneau de réponses
-  const toggleResponsePanel = () => {
-    const panel = document.getElementById('reponses-demo');
-    if (panel) {
-      panel.classList.toggle('visible');
-    }
-  };
-  
   return (
-    <div className={`min-h-screen ${isEmergencyMode ? 'bg-potomitan-red bg-opacity-10' : 'bg-potomitan-beige'}`}>
+    <div className="min-h-screen bg-potomitan-beige">
       <div className="container mx-auto p-4">
-        {isEmergencyMode && (
-          <div className="bg-potomitan-red text-white p-3 rounded-md mb-4 flex justify-between items-center">
-            <span className="font-bold">URGENCE IMMÉDIATE</span>
-            <button 
-              onClick={toggleEmergencyMode}
-              className="bg-white text-potomitan-red px-4 py-2 rounded-md font-bold"
-            >
-              EXIT
-            </button>
+        
+        {/* Traducteur */}
+        <div className="mb-6">
+          <button 
+            onClick={() => setShowTranslator(!showTranslator)}
+            className="w-full bg-potomitan-medium-blue text-white py-4 rounded-md font-bold text-xl shadow-lg hover:bg-potomitan-dark-blue transition"
+          >
+            {showTranslator ? '📚 Fermer traducteur' : '🔄 Traducteur français ↔ créole'}
+          </button>
+        </div>
+        
+        {showTranslator && (
+          <div className="mb-6">
+            <TextTranslation />
           </div>
         )}
         
-        {!isEmergencyMode && (
-          <button 
-            onClick={toggleEmergencyMode}
-            className="w-full bg-potomitan-red text-white py-4 mb-6 rounded-md font-bold text-xl"
-          >
-            MODE URGENCE
-          </button>
-        )}
-        
+        {/* Catégories */}
         <div className="grid grid-cols-2 gap-4 mb-6">
           {categories.map(category => (
             <Link 
               key={category.id}
               to={`/phrases/${category.id}`}
-              className={`${category.color} p-6 rounded-md text-center font-bold text-white shadow-md hover:shadow-lg transition`}
+              className={`${category.color} p-6 rounded-md text-center font-bold text-white shadow-md hover:shadow-lg transition ${
+                category.urgent ? 'ring-4 ring-red-300 ring-opacity-50' : ''
+              }`}
             >
               {category.name}
+              {category.urgent && <div className="text-sm mt-1">⚡ URGENT</div>}
             </Link>
           ))}
         </div>
         
+        {/* Phrases critiques */}
         <div className="mt-6">
-          <h2 className="text-lg font-bold mb-3">Phrases essentielles:</h2>
-          <ul className="bg-white rounded-md shadow-md p-4">
-            <li className="border-b py-2">
+          <h2 className="text-lg font-bold mb-3 text-potomitan-red">🚨 Phrases critiques :</h2>
+          <ul className="bg-white rounded-md shadow-md">
+            <li className="border-b p-4 border-l-4 border-red-500">
               <div className="flex justify-between items-center">
                 <div>
-                  <p className="font-medium">Où avez-vous mal ?</p>
+                  <p className="font-bold text-lg">Où avez-vous mal ?</p>
                   <p className="text-gray-600 italic">Ki koté ou ni mal ?</p>
                 </div>
                 <button 
                   onClick={() => playAudio('ou_mal.mp3')} 
-                  className="bg-potomitan-light-blue p-2 rounded-full"
+                  className="bg-potomitan-red p-3 rounded-full text-white shadow-lg hover:bg-opacity-90"
                 >
-                <img src={hautParleurIcon} alt="Listen" className="w-4 h-4" />
+                  <img src={hautParleurIcon} alt="Listen" className="w-4 h-4" />
                 </button>
               </div>
             </li>
-            <li className="border-b py-2">
+            <li className="border-b p-4 border-l-4 border-orange-500">
               <div className="flex justify-between items-center">
                 <div>
-                  <p className="font-medium">Restez calme</p>
+                  <p className="font-bold text-lg">Restez calme</p>
                   <p className="text-gray-600 italic">Rété kalm</p>
                 </div>
                 <button 
                   onClick={() => playAudio('calme.mp3')} 
-                  className="bg-potomitan-light-blue p-2 rounded-full"
+                  className="bg-potomitan-orange p-3 rounded-full text-white shadow-lg hover:bg-opacity-90"
                 >
-                <img src={hautParleurIcon} alt="Listen" className="w-4 h-4" />
+                  <img src={hautParleurIcon} alt="Listen" className="w-4 h-4" />
                 </button>
               </div>
             </li>
-            <li className="border-b py-2">
+            <li className="p-4 border-l-4 border-green-500">
               <div className="flex justify-between items-center">
                 <div>
-                  <p className="font-medium">Les secours arrivent</p>
+                  <p className="font-bold text-lg">Les secours arrivent</p>
                   <p className="text-gray-600 italic">Sékou-la ka rivé</p>
                 </div>
                 <button 
                   onClick={() => playAudio('secours_arrivent.mp3')} 
-                  className="bg-potomitan-light-blue p-2 rounded-full"
+                  className="bg-potomitan-green p-3 rounded-full text-white shadow-lg hover:bg-opacity-90"
                 >
-                 <img src={hautParleurIcon} alt="Listen" className="w-4 h-4" />
+                  <img src={hautParleurIcon} alt="Listen" className="w-4 h-4" />
                 </button>
               </div>
             </li>
           </ul>
         </div>
         
-        {/* Affichage de la traduction bidirectionnelle si une réponse est sélectionnée */}
-        {selectedResponse && (
-          <div className="mt-6 bg-white p-4 rounded-md shadow-md border-l-4 border-potomitan-green">
-            <h2 className="text-lg font-bold mb-3">Traduction bidirectionnelle:</h2>
-            <div className="flex flex-col gap-2">
-              <div className="p-3 bg-potomitan-beige bg-opacity-50 rounded-md">
-                <p className="text-sm text-gray-600">Réponse en créole:</p>
-                <p className="font-medium italic">{selectedResponse.creole}</p>
-              </div>
-              <div className="p-3 bg-potomitan-light-blue bg-opacity-30 rounded-md">
-                <p className="text-sm text-gray-600">Traduction en français:</p>
-                <p className="font-medium">{selectedResponse.francais}</p>
+        {/* Section contribution */}
+        <div className="mt-8 bg-gradient-to-r from-potomitan-green to-potomitan-light-blue bg-opacity-10 p-6 rounded-lg shadow-md border border-potomitan-green border-opacity-30">
+          <div className="flex items-start gap-4">
+            <div className="flex-shrink-0">
+              <div className="w-12 h-12 bg-potomitan-green rounded-full flex items-center justify-center text-white text-xl">
+                🤝
               </div>
             </div>
+            <div className="flex-1">
+              <h3 className="text-xl font-bold mb-2 text-potomitan-dark-blue">
+                Votre créole peut sauver des vies !
+              </h3>
+              <p className="text-gray-700 mb-4 leading-relaxed">
+                Vous parlez créole guadeloupéen ? Votre expertise est précieuse ! 
+                Aidez-nous à enrichir POTOMITAN en validant des traductions, 
+                ajoutant de nouvelles phrases d'urgence ou enregistrant l'audio authentique.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link 
+                  to="/contribuer"
+                  className="bg-potomitan-green text-white px-6 py-3 rounded-md font-bold text-center hover:bg-opacity-90 transition shadow-md"
+                >
+                  ✨ Je veux contribuer
+                </Link>
+                <button 
+                  onClick={() => alert('Fonctionnalité en développement')}
+                  className="bg-white border-2 border-potomitan-green text-potomitan-green px-6 py-3 rounded-md font-medium hover:bg-potomitan-green hover:text-white transition"
+                >
+                  📊 Mes contributions
+                </button>
+              </div>
+              <p className="text-sm text-gray-500 mt-3">
+                💡 Chaque contribution améliore la communication d'urgence en Guadeloupe
+              </p>
+            </div>
           </div>
-        )}
-        
-        {/* Bouton d'urgence */}
-        <button className="fixed bottom-6 right-6 bg-potomitan-red text-white p-4 rounded-full shadow-lg">
-          112
-        </button>
-        
-        {/* Bouton pour montrer le panneau de réponses */}
-        <button 
-          onClick={toggleResponsePanel}
-          className="fixed bottom-6 left-6 bg-potomitan-orange text-white px-4 py-2 rounded-md shadow-lg z-10"
-        >
-          Démo Réponses
-        </button>
+        </div>
       </div>
       
-      {/* Panneau de réponses (initialement caché) */}
-      <div id="reponses-demo" className="reponses-demo fixed bottom-0 left-0 right-0 bg-white p-4 shadow-lg transform translate-y-full transition-transform duration-300 ease-in-out z-20">
-        <ReponseCreole onSelect={handleResponseSelection} />
-      </div>
-      
-      {/* Styles supplémentaires pour le panneau de réponses */}
-      <style jsx>{`
-        .reponses-demo.visible {
-          transform: translateY(0);
-        }
-      `}</style>
+      {/* Bouton 112 uniquement */}
+      <a 
+        href="tel:112"
+        className="fixed bottom-6 right-6 bg-potomitan-red text-white p-4 rounded-full shadow-lg text-xl font-bold hover:bg-opacity-90 transition animate-pulse z-30"
+      >
+        📞 112
+      </a>
     </div>
   );
 }

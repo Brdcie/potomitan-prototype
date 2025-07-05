@@ -4,12 +4,10 @@
 // Voir le fichier LICENSE pour plus d’informations.
 
 import { Link } from 'react-router-dom';
-import { useEmergency } from '../context/EmergencyContext';
 import { useState, useEffect } from 'react';
 import LogoPotomitan from '../assets/logo-potomitan.svg';
 
 export default function NavBar() {
-  const { isEmergencyMode } = useEmergency();
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
@@ -24,7 +22,7 @@ export default function NavBar() {
   }, []);
 
   return (
-    <nav className={`w-full p-4 ${isEmergencyMode ? 'bg-potomitan-red' : 'bg-potomitan-dark-blue'}`}>
+    <nav className="w-full p-4 bg-potomitan-dark-blue"> 
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center">
           <div className={`rounded-full bg-white p-1 flex items-center justify-center ${isMobile ? 'mr-0' : 'mr-2'}`}>

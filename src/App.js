@@ -2,7 +2,6 @@
 // Ce fichier est sous licence MPL-2.0.
 // Voir le fichier LICENSE pour plus d’informations.
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { EmergencyProvider } from './context/EmergencyContext';
 import NavBar from './components/NavBar';
 import HomePage from './pages/HomePage';
 import PhrasesPage from './pages/PhrasesPage';
@@ -10,7 +9,6 @@ import ContributePage from './pages/ContributePage';
 
 function App() {
   return (
-    <EmergencyProvider>
       <Router>
         <div className="flex flex-col min-h-screen">
           <NavBar />
@@ -24,7 +22,6 @@ function App() {
           </main>
         </div>
       </Router>
-    </EmergencyProvider>
   );
 }
 
