@@ -254,7 +254,7 @@ const handleSubmit = (e) => {
               <p className="text-sm text-gray-600">Facilitez la communication en situation d'urgence</p>
             </div>
             <div className="text-center">
-              <div className="text-2xl mb-2">🤝</div>
+              <div className="text-2xl mb-2">🫱🏽‍🫲🏻 </div>
               <h4 className="font-medium mb-1">Communauté</h4>
               <p className="text-sm text-gray-600">Rejoignez une communauté engagée pour l'innovation sociale</p>
             </div>

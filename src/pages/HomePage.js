@@ -1,4 +1,4 @@
-// src/pages/HomePage.js - Version corrigée
+// src/pages/HomePage.js
 // POTOMITAN – © 2025
 // Ce fichier est sous licence MPL-2.0.
 import { Link } from 'react-router-dom';
