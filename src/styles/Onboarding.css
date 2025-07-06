@@ -1,0 +1,251 @@
+/* src/styles/Onboarding.css - À ajouter à ton index.css */
+
+/* Animations pour l'onboarding */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 0.8;
+    }
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Classes d'animation */
+  .animate-fadeIn {
+    animation: fadeIn 0.6s ease-out;
+  }
+  
+  .animate-slideIn {
+    animation: slideIn 0.5s ease-out;
+  }
+  
+  .animate-bounce {
+    animation: bounce 2s infinite;
+  }
+  
+  .animate-pulse {
+    animation: pulse 2s infinite;
+  }
+  
+  .animate-spin {
+    animation: spin 1s linear infinite;
+  }
+  
+  /* Styles spécifiques onboarding */
+  .onboarding-flow {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  .onboarding-step {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  .progress-bar {
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .step-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+  
+  .step-indicator.active {
+    color: #1d4ed8;
+    font-weight: 600;
+  }
+  
+  /* Boutons onboarding */
+  .onboarding-button {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .onboarding-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .onboarding-button:active {
+    transform: translateY(0);
+  }
+  
+  .onboarding-button.success {
+    background-color: #10b981;
+    transform: scale(1.05);
+  }
+  
+  .onboarding-button.success::after {
+    content: '✅';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    animation: fadeIn 0.3s ease-in;
+  }
+  
+  /* Cartes d'information */
+  .info-card {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border-left: 4px solid #0ea5e9;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .success-card {
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+    border-left: 4px solid #22c55e;
+  }
+  
+  .warning-card {
+    background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+    border-left: 4px solid #f59e0b;
+  }
+  
+  /* Feedback visuel pour interactions */
+  .interactive-element {
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .interactive-element:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .interactive-element.clicked {
+    transform: scale(0.98);
+    background-color: #10b981;
+    color: white;
+  }
+  
+  /* Responsive pour mobile */
+  @media (max-width: 640px) {
+    .onboarding-step {
+      padding: 1rem;
+      min-height: 50vh;
+    }
+    
+    .onboarding-button {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.125rem;
+    }
+    
+    .info-card {
+      padding: 0.75rem;
+      font-size: 0.875rem;
+    }
+  }
+  
+  /* Timer visuel */
+  .timer-ring {
+    width: 60px;
+    height: 60px;
+    border: 4px solid #e5e7eb;
+    border-top: 4px solid #3b82f6;
+    border-radius: 50%;
+    position: relative;
+  }
+  
+  .timer-ring.active {
+    animation: spin 1s linear infinite;
+  }
+  
+  .timer-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #374151;
+  }
+  
+  /* États de validation */
+  .validation-success {
+    border: 2px solid #22c55e;
+    background-color: #f0fdf4;
+    animation: pulse 0.5s ease-in-out;
+  }
+  
+  .validation-pending {
+    border: 2px solid #f59e0b;
+    background-color: #fffbeb;
+    animation: pulse 2s infinite;
+  }
+  
+  /* Transitions entre étapes */
+  .step-transition-enter {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  
+  .step-transition-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.5s ease-out;
+  }
+  
+  .step-transition-exit {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .step-transition-exit-active {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 0.5s ease-in;
+  }

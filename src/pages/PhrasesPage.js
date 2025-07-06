@@ -16,16 +16,23 @@ export default function PhrasesPage() {
   
   // Fonction pour filtrer les phrases par catégorie, incluant les phrases personnalisées
   useEffect(() => {
+    console.log('🔍 category from URL:', category);
+  console.log('🔍 phrasesData keys:', Object.keys(phrasesData));
+  console.log('🔍 phrasesData[category]:', phrasesData[category]);
+  console.log('🔍 phrasesData[category] exists?', !!phrasesData[category]);
     const customPhrases = JSON.parse(localStorage.getItem('customPhrases') || '[]');
     
     if (category && phrasesData[category]) {
+      console.log('✅ Category found, loading phrases for:', category);
       const predefinedPhrases = phrasesData[category];
       const categoryCustomPhrases = customPhrases.filter(p => p.category === category);
       setPhrases([...categoryCustomPhrases, ...predefinedPhrases]);
     } else if (!category) {
+      console.log('ℹ️ No category, showing all phrases');
       const allPredefinedPhrases = Object.values(phrasesData).flat();
       setPhrases([...customPhrases, ...allPredefinedPhrases]);
     } else {
+      console.log('❌ Category not found:', category);
       navigate('/phrases');
     }
   }, [category, navigate]);
@@ -89,39 +96,40 @@ export default function PhrasesPage() {
                      category) : 'Toutes les phrases'}
         </h1>
         
-        {/* Filtres par niveau d'urgence */}
-        <div className="flex space-x-2 mb-4 overflow-x-auto">
-          <button 
-            onClick={() => setFilter('all')} 
-            className={`px-3 py-1 rounded-full text-sm whitespace-nowrap ${filter === 'all' ? 'bg-potomitan-dark-blue text-white' : 'bg-gray-200'}`}
-          >
-            Tous
-          </button>
-          <button 
-            onClick={() => setFilter('critical')} 
-            className={`px-3 py-1 rounded-full text-sm whitespace-nowrap ${filter === 'critical' ? 'bg-potomitan-red text-white' : 'bg-potomitan-red bg-opacity-25 text-potomitan-red'}`}
-          >
-            Critique
-          </button>
-          <button 
-            onClick={() => setFilter('high')} 
-            className={`px-3 py-1 rounded-full text-sm whitespace-nowrap ${filter === 'high' ? 'bg-potomitan-orange text-white' : 'bg-potomitan-orange bg-opacity-25 text-potomitan-orange'}`}
-          >
-            Important
-          </button>
-          <button 
-            onClick={() => setFilter('medium')} 
-            className={`px-3 py-1 rounded-full text-sm whitespace-nowrap ${filter === 'medium' ? 'bg-potomitan-yellow text-white' : 'bg-potomitan-yellow bg-opacity-25 text-potomitan-yellow'}`}
-          >
-            Standard
-          </button>
-          <button 
-            onClick={() => setFilter('low')} 
-            className={`px-3 py-1 rounded-full text-sm whitespace-nowrap ${filter === 'low' ? 'bg-potomitan-green text-white' : 'bg-potomitan-green bg-opacity-25 text-potomitan-green'}`}
-          >
-            Utile
-          </button>
-        </div>
+       {/* Filtres par niveau d'urgence */}
+<div className="flex space-x-2 mb-4 overflow-x-auto">
+  <button 
+    onClick={() => setFilter('all')} 
+    className={`px-3 py-1 rounded-full text-sm whitespace-nowrap ${filter === 'all' ? 'bg-potomitan-dark-blue text-white' : 'bg-gray-200'}`}
+  >
+    Tous
+  </button>
+  <button 
+    onClick={() => setFilter('critical')} 
+    className={`px-3 py-1 rounded-full text-sm whitespace-nowrap ${filter === 'critical' ? 'bg-potomitan-red text-white' : 'bg-red-100 text-potomitan-red'}`}
+  >
+    Critique
+  </button>
+  <button 
+    onClick={() => setFilter('high')} 
+    className={`px-3 py-1 rounded-full text-sm whitespace-nowrap ${filter === 'high' ? 'bg-potomitan-orange text-white' : 'bg-orange-100 text-potomitan-orange'}`}
+  >
+    Important
+  </button>
+  <button 
+    onClick={() => setFilter('medium')} 
+    className={`px-3 py-1 rounded-full text-sm whitespace-nowrap ${filter === 'medium' ? 'bg-potomitan-yellow text-white' : 'bg-yellow-100 text-potomitan-yellow'}`}
+  >
+    Standard
+  </button>
+  <button 
+    onClick={() => setFilter('low')} 
+    className={`px-3 py-1 rounded-full text-sm whitespace-nowrap ${filter === 'low' ? 'bg-potomitan-green text-white' : 'bg-green-100 text-potomitan-green'}`}
+  >
+    Utile
+  </button>
+</div>
+
         
         {/* Liste des phrases */}
         <div className="bg-white rounded-md shadow-md overflow-hidden">

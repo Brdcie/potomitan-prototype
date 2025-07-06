@@ -11,3 +11,22 @@
 .reponses-demo.visible {
   transform: translateY(0);
 }
+/* Import du CSS onboarding */
+@import './styles/Onboarding.css';
+
+/* Classes Tailwind custom si manquantes */
+.bg-potomitan-red { background-color: #E63946; }
+.bg-potomitan-orange { background-color: #F3722C; }
+.bg-potomitan-yellow { background-color: #F8961E; }
+.bg-potomitan-green { background-color: #90BE6D; }
+.bg-potomitan-light-blue { background-color: #ADD8E6; }
+.bg-potomitan-medium-blue { background-color: #87CEFA; }
+.bg-potomitan-dark-blue { background-color: #1D3557; }
+.bg-potomitan-beige { background-color: #F1FAEE; }
+
+.text-potomitan-red { color: #E63946; }
+.text-potomitan-green { color: #90BE6D; }
+.text-potomitan-medium-blue { color: #87CEFA; }
+.text-potomitan-dark-blue { color: #1D3557; }
+.text-potomitan-orange { color: #F3722C; }
+.text-potomitan-yellow { color: #F8961E; }
