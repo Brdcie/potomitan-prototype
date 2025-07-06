@@ -16,12 +16,13 @@ const categories = [
 
 // PHRASES CRITIQUES pour mode urgence
 const emergencyPhrases = [
-  { french: "STOP ! Danger !", creole: "STOP ! Danjé !", audio: "calme.mp3", urgency: "critical" },
   { french: "Où avez-vous mal ?", creole: "Ki koté ou ni mal ?", audio: "ou_mal.mp3", urgency: "critical" },
-  { french: "Ne bougez pas", creole: "Pa boujé", audio: "calme.mp3", urgency: "critical" },
+  { french: "Ne bougez pas", creole: "Pa boujé", audio: "pasbougez.mp3", urgency: "critical" },
   { french: "Restez calme", creole: "Rété kalm", audio: "calme.mp3", urgency: "high" },
   { french: "Les secours arrivent", creole: "Sékou-la ka rivé", audio: "secours_arrivent.mp3", urgency: "high" },
-  { french: "Respirez profondément", creole: "Rèspiré fò", audio: "ou_mal.mp3", urgency: "high" }
+  { french: "Respirez profondément", creole: "Rèspiré fò", audio: "respire.mp3", urgency: "high" },
+  { french: "STOP ! Danger !", creole: "STOP ! Danjé !", audio: "calme.mp3", urgency: "critical" }
+
 ];
 
 const normalPhrases = [
